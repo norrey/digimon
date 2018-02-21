@@ -195,9 +195,6 @@ public class ExperienceManager {
         requireNonNull(player, "The player must not be null");
         requireNonNull(robot, "The robot must not be null");
 
-        System.out.println("Player Died :" + playerDied(player));
-        System.out.println("Robot Died :" + robotDied(robot));
-
         return !playerDied(player) && !robotDied(robot);
     }
 
