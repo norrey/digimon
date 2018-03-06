@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static java.util.Objects.requireNonNull;
-
 /**
  *
  * @author Norrey Okumu <okumu.norrey@gmail.com>
@@ -53,21 +51,6 @@ public abstract class Robot extends DormantCharacter {
 
     public void reduceEnergyLevel(final int value) {
         this.energyLevel -= value;
-    }
-
-    public void counterAttack(final Player player) {
-        requireNonNull(player, "The player must not be null.");
-        int damage = (player.getExperience().getEnergy() * player.getExperience().getAiKnowledge()) / 2;
-        if (this.energyLevel <= 0 || this.energyLevel < damage) {
-            neautralize();
-            return;
-        }
-        this.energyLevel -= damage;
-    }
-
-    public void neautralize() {
-        this.energyLevel = 0;
-        this.setAlive(false);
     }
 
     @Override

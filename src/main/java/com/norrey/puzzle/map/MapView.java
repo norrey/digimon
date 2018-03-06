@@ -24,6 +24,7 @@ public class MapView {
         Location[][] mapArea = map.getMapArea();
 
         appendColsHeader(sb, mapArea[0].length);
+
         for (int y = 0; y < mapArea.length; y++) {
             appendRowsHeader(sb);
             for (int x = 0; x < mapArea[y].length; x++) {

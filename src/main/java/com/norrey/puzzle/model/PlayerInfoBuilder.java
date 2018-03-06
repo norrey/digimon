@@ -58,7 +58,7 @@ public class PlayerInfoBuilder {
     private Experience buildInitialExperience() {
         final Experience experience = new Experience();
 
-        experience.setMoney(50000);
+        experience.setMoney(5000);
         experience.setAiKnowledge(5);
         experience.setBitcoins(1);
         experience.setEnergy(100);

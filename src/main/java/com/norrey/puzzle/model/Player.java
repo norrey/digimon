@@ -1,9 +1,6 @@
 package com.norrey.puzzle.model;
 
 import com.norrey.puzzle.map.Coordinate;
-import java.util.Collections;
-
-import static com.norrey.puzzle.util.ColorFormatter.red;
 
 /**
  *
@@ -47,11 +44,6 @@ public class Player extends Character {
 
     public Coordinate right() {
         return coordinate.right();
-    }
-
-    public String runAway() {
-        this.experience.reduceEnergy(1);
-        return red("Running away so fast only reduces your energery");
     }
 
     @Override
